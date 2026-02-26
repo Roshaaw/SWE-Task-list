@@ -9,7 +9,7 @@ cd "$APP_DIR"
 
 # Pull latest code (rebase is risky in automation; use a clean sync)
 git fetch --all
-git reset --hard origin/main
+git reset --hard origin/master
 
 # Ensure venv exists and is built with Python 3.11+
 if [ ! -d "$VENV_DIR" ]; then
