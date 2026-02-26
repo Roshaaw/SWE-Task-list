@@ -1,6 +1,6 @@
 # Track List App — CS 4800 Spring 2026  
 
-### **Project Overview** 
+### **Project Overview:** 
 **SWE Task List App**  is a full-stack Task List web application built using Flask and MongoDB Atlas.
 The application is deployed on AWS EC2 and automatically updates using GitHub Actions (CI/CD)
 
