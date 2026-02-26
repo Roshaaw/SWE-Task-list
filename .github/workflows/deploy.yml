@@ -1,4 +1,4 @@
-name: Deploy (EC2 nohup)
+name: Deploy (EC2)
 
 on:
   push:
@@ -24,5 +24,8 @@ jobs:
           script: |
             set -e
             cd ~/SWE-Task-list
+            git fetch origin
+            git reset --hard origin/master
+            chmod +x run.sh
             ./run.sh
-            tail -n 50 log.txt
+            tail -n 50 log.txt || true

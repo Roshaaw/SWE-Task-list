@@ -30,6 +30,9 @@ PY="$VENV_DIR/bin/python"
 # Stop previous process (if any) by matching the exact command
 pkill -f "$PY $APP_FILE" || true
 
+# Ensure port is free (prevents "Address already in use")
+sudo fuser -k 8080/tcp || true
+
 # Start new process
 nohup "$PY" "$APP_FILE" > log.txt 2>&1 &
 
