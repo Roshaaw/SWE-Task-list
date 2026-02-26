@@ -2,13 +2,13 @@ name: Deploy (EC2 nohup)
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 permissions:
   contents: read
 
 concurrency:
-  group: deploy-main
+  group: deploy-master
   cancel-in-progress: true
 
 jobs:
