@@ -23,6 +23,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             set -e
-            cd ~/5-dollar-lunch-spring
+            cd ~/SWE-Task-list
             ./run.sh
             tail -n 50 log.txt
